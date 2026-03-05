@@ -42,25 +42,25 @@ st.markdown("""
 with st.sidebar:
 
     with st.expander("Book Name", expanded=True):
-        title = st.text_input("Book Title", placeholder="e.g. The Great Gatsby")
+        title = st.text_input("Book Title", placeholder="e.g. The Lord of the rings")
 
     with st.expander("Pricing & Tax", expanded=True):
-        retail_price = st.number_input("Retail Price (€)", value=5.80, step=0.10, format="%.2f")
+        retail_price = st.number_input("Retail Price (€)", value=17.50, step=0.10, format="%.2f")
         vat_pct = st.number_input("VAT (%)", value=6.0, step=0.5, format="%.1f") / 100
         wholesale_discount_pct = st.number_input("Wholesale Discount (%)", value=40.0, step=1.0, format="%.1f")/ 100
 
     with st.expander("Production", expanded=True):
-        quantity_produced = st.number_input("Print Run (units)", value=12000, step=100)
-        unit_cost = st.number_input("Unit Production Cost (€)", value=0.75, step=0.05, format="%.2f")
+        quantity_produced = st.number_input("Print Run (units)", value=20000, step=100)
+        unit_cost = st.number_input("Unit Production Cost (€)", value=2.50, step=0.05, format="%.2f")
 
     with st.expander("Editorial Fees", expanded=True):
-        translation_fee    = st.number_input("Translation Fees (€)", value=400, step=50,)
-        design_fee         = st.number_input("Design Fees (€)", value=250, step=50,)
-        digital_files_cost = st.number_input("Digital Files Cost (€)", value=800, step=50,)
+        translation_fee    = st.number_input("Translation Fees (€)", value=1500, step=50,)
+        design_fee         = st.number_input("Design Fees (€)", value=1500, step=50,)
+        digital_files_cost = st.number_input("Digital Files Cost (€)", value=1000, step=50,)
 
     with st.expander("Rights & Royalties", expanded=True):
-        royalty_rate = st.number_input("Royalty Rate (%)", value=12.0, step=0.5, format="%.1f") / 100
-        advance = st.number_input("Author Advance (€)", value=0, step=100)
+        royalty_rate = st.number_input("Royalty Rate (%)", value=10.0, step=0.5, format="%.1f") / 100
+        advance = st.number_input("Author Advance (€)", value=1000, step=100)
         estimated_sales = st.number_input("Estimated Sales (units)",
             value=quantity_produced, max_value=int(quantity_produced), step=100)
 
@@ -83,7 +83,7 @@ with st.sidebar:
                 Insert the monthly estimated sales as % of total quantity (must total 100%)
             </p>
         """, unsafe_allow_html=True)
-        default_curve = [20,12,10,8,7,6,5,4,4,3,3,3,2,2,2,2,1,1,1,1,1,0,0,0]
+        default_curve = [15,12,10,8,7,6,5,4,4,3,3,3,2,2,2,2,1,1,1,1,1,0,0,0]
         df_pct_sidebar = pd.DataFrame({
             "Month":   [f"Month {i+1}" for i in range(24)],
             "Sales %": [float(d) for d in default_curve],
