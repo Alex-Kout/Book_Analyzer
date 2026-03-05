@@ -173,7 +173,7 @@ all_labels   = ["Pre-launch"] + month_labels
 # ══════════════════════════════════════════════════════════════
 tab0, tab1, tab2, tab3, tab4 = st.tabs([
     "Executive Summary",
-    "P&L Overview",
+    "Profit & Loss Overview",
     "Cash Flow Projection",
     "Investment Analysis",
     "Scenario Comparison",
