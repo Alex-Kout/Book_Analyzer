@@ -1,0 +1,129 @@
+html, body, [class*="css"] { font-family: Helvetica, Arial, sans-serif; }
+.main { background-color: #f4f1ec; }
+.block-container { padding-top: 1.5rem; padding-bottom: 2rem; max-width: 1200px; }
+
+.app-header {
+    background: #2d3561 ; border-radius: 14px;
+    padding: 1.6rem 2.2rem; margin-bottom: 1.8rem;
+}
+.app-header h1 {
+    font-family: Helvetica, Arial, sans-serif; font-size: 3rem;
+    margin: 0 0 0.55rem 0; color: #ffffff; letter-spacing: -0.01em;
+}
+.app-header p {
+    font-family: Helvetica, Arial, sans-serif; margin: 0;
+    color: #ffffff; font-size: 1.0 rem; font-weight: 300;
+}
+.section-card {
+    background: white; border-radius: 12px; padding: 1.4rem 1.6rem;
+    margin-bottom: 1rem; border: 1px solid #e8e4dc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.section-title {
+    font-family: Helvetica, Arial, sans-serif; font-size: 1rem;
+    font-weight: 800; color: #1a1a2e; margin-bottom: 1rem;
+    padding-bottom: 0.45rem; border-bottom: 2px solid #f0c674;
+}
+.kpi-box {
+    background: #fcfaf8; border-radius: 10px; padding: 1rem 1.2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03); border: 1px solid #e8e4dc;
+    margin-bottom: 0.8rem;
+}
+.kpi-label {
+    color: #718096; font-size: 0.65rem; text-transform: uppercase;
+    letter-spacing: 0.08em; margin: 0 0 0.3rem 0;
+    font-family: Helvetica, Arial, sans-serif; font-weight: 600;
+}
+.kpi-value {
+    color: #1a1a2e; font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.4rem; margin: 0; font-weight: 700;
+}
+.kpi-delta {
+    font-size: 0.78rem; margin: 0.2rem 0 0 0;
+    font-family: Helvetica, Arial, sans-serif; font-weight: 500; color: #718096;
+}
+section[data-testid="stSidebar"] { background: #faf8f4; padding-top: 0 !important; }
+section[data-testid="stSidebar"] > div { padding-top: 0.5rem; }
+section[data-testid="stSidebar"] * { color: #1a1a2e !important; }
+section[data-testid="stSidebar"] details summary,
+section[data-testid="stSidebar"] details summary p,
+section[data-testid="stSidebar"] details summary span,
+section[data-testid="stSidebar"] details[open] summary,
+section[data-testid="stSidebar"] details[open] summary p,
+section[data-testid="stSidebar"] details[open] summary span { color: #ffffff !important; font-weight: 700 !important;}
+section[data-testid="stSidebar"] .stNumberInput,
+section[data-testid="stSidebar"] .stTextInput { margin-bottom: -10px; }
+section[data-testid="stSidebar"] .stNumberInput label,
+section[data-testid="stSidebar"] .stTextInput label {
+    font-size: 0.62rem !important; text-transform: uppercase;
+    letter-spacing: 0.05em; color: #1a1a2e !important; margin-bottom: 0;
+}
+section[data-testid="stSidebar"] input { color: #1a1a2e !important; }
+section[data-testid="stSidebar"] input { color: #1a1a2e !important; }
+section[data-testid="stSidebar"] details {
+    border-radius: 8px !important; margin-bottom: 0.4rem !important; overflow: hidden !important;
+}
+section[data-testid="stSidebar"] details summary {
+    font-size: 0.78rem !important; letter-spacing: 0.08em !important;
+    text-transform: uppercase !important; padding: 0.5rem 0.8rem !important;
+}
+section[data-testid="stSidebar"] details[open] > div { background: #f0ece4    !important; }
+section[data-testid="stSidebar"] details:nth-of-type(1) summary { background: #2d3561 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(1) { border-left: 3px solid #6b8cff !important; }
+section[data-testid="stSidebar"] details:nth-of-type(2) summary { background: #1e4d3a !important; }
+section[data-testid="stSidebar"] details:nth-of-type(2) { border-left: 3px solid #52b788 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(3) summary { background: #4a2040 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(3) { border-left: 3px solid #e07070 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(4) summary { background: #4a3520 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(4) { border-left: 3px solid #f0c674 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(5) summary { background: #1a3a4a !important; }
+section[data-testid="stSidebar"] details:nth-of-type(5) { border-left: 3px solid #90cdf4 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(6) summary { background: #2a4a3a !important; }
+section[data-testid="stSidebar"] details:nth-of-type(6) { border-left: 3px solid #52b788 !important; }
+section[data-testid="stSidebar"] details:nth-of-type(7) summary { background: #3d2a5a !important; }
+section[data-testid="stSidebar"] details:nth-of-type(7) { border-left: 3px solid #d4a5f5 !important; }
+label[data-testid="stWidgetLabel"] p {
+    font-size: 0.9rem; font-weight: 500; color: #4a5568;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    font-family: Helvetica, Arial, sans-serif;
+}
+[data-testid="stDataFrame"] * {
+    font-family: Helvetica, Arial, sans-serif !important; font-size: 0.85rem !important;
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    background: #2d3561;
+    border-radius: 10px;
+    padding: 0.3rem 0.4rem;
+    gap: 0.2rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: transparent;
+    border-radius: 8px;
+    color: #ffffff !important;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.45rem 1rem;
+}
+
+.stTabs [aria-selected="true"] {
+    background: #f0c674 !important;
+    color: #1a1a2e !important;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    background: rgba(255,255,255,0.08) !important;
+    color: #ffffff !important;
+}
+
+section[data-testid="stSidebar"] .stNumberInput label p,
+section[data-testid="stSidebar"] .stTextInput label p,
+section[data-testid="stSidebar"] .stNumberInput label div,
+section[data-testid="stSidebar"] .stTextInput label div {
+    color: #1a1a2e !important;
+    font-weight: 700 !important;
+}
