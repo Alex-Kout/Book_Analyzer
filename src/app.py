@@ -295,7 +295,7 @@ with tab1:
         })
         def color_pl(val):
             return f"color: {'#1a5c3a' if val >= 0 else '#8b1a1a'}; font-weight: 600"
-        styled = (df_pl.style.applymap(color_pl, subset=["Amount (€)"])
+        styled = (df_pl.style.map(color_pl, subset=["Amount (€)"])
                   .format({"Amount (€)": lambda x: f"{x:,.0f}€".replace(",",".")}))
         st.dataframe(styled, use_container_width=True, hide_index=True)
         st.markdown('</div>', unsafe_allow_html=True)
@@ -336,7 +336,7 @@ with tab2:
         if isinstance(val, (int, float)):
             return f"color: {'#1a5c3a' if val >= 0 else '#8b1a1a'}; font-weight: 600"
         return ""
-    styled_cf = (df_cf.style.applymap(color_cf, subset=["Net CF (€)","Cumulative (€)"])
+    styled_cf = (df_cf.style.map(color_cf, subset=["Net CF (€)","Cumulative (€)"])
                  .format({"Inflows (€)": lambda x: fmt(x), "Outflows (€)": lambda x: fmt(x),
                           "Net CF (€)": lambda x: fmt(x), "Cumulative (€)": lambda x: fmt(x)}))
     st.dataframe(styled_cf, use_container_width=True, hide_index=True)
@@ -398,7 +398,7 @@ with tab3:
         if isinstance(val, (int, float)):
             return f"color: {'#1a5c3a' if val >= 0 else '#8b1a1a'}; font-weight: 600"
         return ""
-    styled_dcf = (df_dcf.style.applymap(color_dcf, subset=["Net CF (€)","PV of CF (€)","Cumulative PV (€)"])
+    styled_dcf = (df_dcf.style.map(color_dcf, subset=["Net CF (€)","PV of CF (€)","Cumulative PV (€)"])
                   .format({"Net CF (€)": lambda x: fmt(x), "PV of CF (€)": lambda x: fmt(x),
                            "Cumulative PV (€)": lambda x: fmt(x)}))
     st.dataframe(styled_dcf, use_container_width=True, hide_index=True)
